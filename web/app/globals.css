@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0e1a;
+  --bg2: #0f1424;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --stroke: rgba(255, 255, 255, 0.10);
+  --stroke-2: rgba(255, 255, 255, 0.16);
+
+  --ink: #eef2ff;
+  --muted: #9aa6c4;
+  --faint: #6b7596;
+
+  --brand: #7c5cff;
+  --brand2: #22d3ee;
+  --accent: #f472b6;
+
+  --ok: #34d399;
+  --warn: #fbbf24;
+  --bad: #fb7185;
+
+  --r-s: 10px;
+  --r-m: 16px;
+  --r-l: 22px;
+
+  --grad: linear-gradient(120deg, #7c5cff 0%, #5b8cff 45%, #22d3ee 100%);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-stroke: var(--stroke);
+  --color-stroke-2: var(--stroke-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-brand: var(--brand);
+  --color-brand2: var(--brand2);
+  --color-accent: var(--accent);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+
+  --radius-s: var(--r-s);
+  --radius-m: var(--r-m);
+  --radius-l: var(--r-l);
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body {
+  background:
+    radial-gradient(1100px 620px at 12% -8%, rgba(124, 92, 255, 0.22), transparent 60%),
+    radial-gradient(900px 560px at 105% 8%, rgba(34, 211, 238, 0.16), transparent 55%),
+    linear-gradient(180deg, #0a0e1a 0%, #0b1020 60%, #0a0e1a 100%);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(circle at 50% 0%, #000, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at 50% 0%, #000, transparent 75%);
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+@utility bg-grad {
+  background-image: var(--grad);
+}
+
+a {
+  color: var(--brand2);
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.35);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
