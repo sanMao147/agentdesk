@@ -32,7 +32,9 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - API_BASE_URL=http://api:8000/api
+      # next.config.ts 中 destination 已自带 /api/ 前缀，这里只填 origin。
+      # 注意：该变量在 next build 阶段被内联，运行时改动不生效。
+      - API_BASE_URL=http://api:8000
       - HOSTNAME=0.0.0.0
       - PORT=3000
     depends_on:
