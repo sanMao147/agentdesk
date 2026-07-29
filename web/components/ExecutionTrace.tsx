@@ -36,7 +36,7 @@ export function ExecutionTrace({ trace }: ExecutionTraceProps) {
       <div className="relative ml-1.5 pl-[22px]">
         <div
           className="absolute left-[5px] top-1.5 bottom-1.5 w-0.5"
-          style={{ background: "linear-gradient(180deg, #7c5cff, #22d3ee)" }}
+          style={{ background: "var(--stroke-2)" }}
         />
         {trace.map((step, i) => {
           const title = NODE_LABELS[step.node]?.[0] || step.node;
@@ -44,10 +44,13 @@ export function ExecutionTrace({ trace }: ExecutionTraceProps) {
           return (
             <div key={i} className="relative pl-1 pb-4">
               <div
-                className="absolute -left-[22px] top-[3px] w-[13px] h-[13px] rounded-full bg-grad border-2 border-transparent"
-                style={{ boxShadow: "0 0 0 4px rgba(124,92,255,0.12)" }}
+                className="absolute -left-[22px] top-[3px] w-[13px] h-[13px] rounded-full border-2 border-transparent"
+                style={{
+                  backgroundColor: "var(--brand)",
+                  boxShadow: "0 0 0 4px rgba(16,185,129,0.12)",
+                }}
               />
-              <div className="text-[0.86rem] font-bold text-[#e7ebff]">{title}</div>
+              <div className="text-[0.86rem] font-bold text-ink">{title}</div>
               <div className="text-[0.78rem] text-muted mt-0.5 leading-relaxed">{description}</div>
             </div>
           );

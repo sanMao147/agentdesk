@@ -56,7 +56,7 @@ export function MemoryEvolution({ userId, refreshKey }: MemoryEvolutionProps) {
                     </Pill>
                     <span className="font-mono text-[0.74rem] text-muted">命中 {r.use_count} 次</span>
                   </div>
-                  <div className="text-[#c3cbe6] text-[0.84rem] leading-relaxed mt-1.5">{r.text}</div>
+                  <div className="text-muted text-[0.84rem] leading-relaxed mt-1.5">{r.text}</div>
                   {superseded.map((o) => (
                     <div key={o.mem_id} className="text-faint text-[0.72rem] line-through mt-1">
                       v{o.version} {o.text}（已被取代）

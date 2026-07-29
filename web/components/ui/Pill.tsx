@@ -9,9 +9,9 @@ type PillProps = Omit<ComponentPropsWithoutRef<"span">, "color" | "children"> & 
 };
 
 const variantClasses: Record<PillVariant, string> = {
-  default: "bg-brand/15 text-[#d9d2ff]",
-  tool: "bg-ok/15 text-[#b8f5dd]",
-  bad: "bg-bad/15 text-[#ffc6cf]",
+  default: "bg-brand/15 text-[#a7f3d0]",
+  tool: "bg-ok/15 text-[#a7f3d0]",
+  bad: "bg-bad/15 text-[#fecaca]",
 };
 
 export function Pill({

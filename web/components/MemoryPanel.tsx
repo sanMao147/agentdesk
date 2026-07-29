@@ -30,7 +30,7 @@ export function MemoryPanel({ recalledMemories, memoryWrites }: MemoryPanelProps
                   </Pill>
                   <span className="font-mono text-[0.74rem] text-muted">召回 · 注入回答</span>
                 </div>
-                <div className="text-[#c3cbe6] text-[0.84rem] leading-relaxed mt-2">{m.text}</div>
+                <div className="text-muted text-[0.84rem] leading-relaxed mt-2">{m.text}</div>
               </div>
             );
           })}

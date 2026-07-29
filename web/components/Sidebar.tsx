@@ -90,13 +90,13 @@ export function Sidebar({
           会话 {sessionId.slice(0, 8)}…
         </div>
         <button
-          type="button"
-          onClick={onNewSession}
-          className="rounded-xl border border-stroke-2 bg-surface-2 text-[#dfe4ff] font-semibold py-2 px-3 hover:border-brand hover:text-white hover:bg-brand/16 transition w-full text-sm"
-        >
-          新会话
-        </button>
-      </div>
+            type="button"
+            onClick={onNewSession}
+            className="rounded-xl border border-stroke-2 bg-surface-2 text-ink font-semibold py-2 px-3 hover:border-brand hover:text-white hover:bg-brand/16 transition w-full text-sm"
+          >
+            新会话
+          </button>
+        </div>
 
       <Eyebrow className="mt-[18px]">试一试</Eyebrow>
       {SAMPLES.map((q) => (
@@ -104,23 +104,23 @@ export function Sidebar({
           key={q}
           type="button"
           onClick={() => onPickSample(q)}
-          className="w-full text-left rounded-xl border border-stroke-2 bg-surface-2 text-[#dfe4ff] font-medium py-2 px-3 mb-1.5 hover:border-brand hover:text-white hover:bg-brand/16 transition text-sm"
+          className="w-full text-left rounded-xl border border-stroke-2 bg-surface-2 text-ink font-medium py-2 px-3 mb-1.5 hover:border-brand hover:text-white hover:bg-brand/16 transition text-sm"
         >
           {q}
         </button>
       ))}
 
       <Expander summary="架构 / 流程" className="mt-3">
-        <p className="mb-2 last:mb-0 text-[0.8rem] text-[#c3cbe6] leading-relaxed">
+        <p className="mb-2 last:mb-0 text-[0.8rem] text-muted leading-relaxed">
           <b>编排（LangGraph）</b>：planner → retrieval → tool → writer → critic；critic 不达标且未超轮数则回 retrieval 重试。
         </p>
-        <p className="mb-2 last:mb-0 text-[0.8rem] text-[#c3cbe6] leading-relaxed">
+        <p className="mb-2 last:mb-0 text-[0.8rem] text-muted leading-relaxed">
           <b>检索</b>：多查询改写 → 向量 + BM25 → RRF 融合 → Rerank。
         </p>
-        <p className="mb-2 last:mb-0 text-[0.8rem] text-[#c3cbe6] leading-relaxed">
+        <p className="mb-2 last:mb-0 text-[0.8rem] text-muted leading-relaxed">
           <b>工具层</b>：MCP 风格 registry（AST 白名单计算器 / kb_stats）。
         </p>
-        <p className="mb-2 last:mb-0 text-[0.8rem] text-[#c3cbe6] leading-relaxed">
+        <p className="mb-2 last:mb-0 text-[0.8rem] text-muted leading-relaxed">
           <b>兜底</b>：langgraph 不可用时顺序等价执行。
         </p>
       </Expander>

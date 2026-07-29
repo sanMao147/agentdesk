@@ -18,10 +18,10 @@ export function CredibilityDerivation({
   const faithful = Boolean(verify.faithful);
   const pct = Math.max(0, Math.min(100, Math.round(score * 100)));
   const gaugeColor = faithful
-    ? "#34d399"
+    ? "#10b981"
     : score >= 0.4
-      ? "#fbbf24"
-      : "#fb7185";
+      ? "#f59e0b"
+      : "#ef4444";
 
   const method = verify.method || "-";
   const detail =
@@ -82,13 +82,13 @@ export function CredibilityDerivation({
     <div>
       <Eyebrow className="mt-1.5">可信度推导 · 这次怎么算的</Eyebrow>
       <Card>
-        <div className="text-[0.82rem] text-[#c3cbe6] leading-loose">
+        <div className="text-[0.82rem] text-muted leading-loose">
           <div>
-            ① 评判方式：<b>{methodLabel}</b>
+            ① 评判方式：<b className="text-ink">{methodLabel}</b>
           </div>
           <div>
-            ② 依据：检索证据 <b>{evidenceCount}</b> 条 · 工具结果{" "}
-            <b>{usedTool ? "有" : "无"}</b>
+            ② 依据：检索证据 <b className="text-ink">{evidenceCount}</b> 条 · 工具结果{" "}
+            <b className="text-ink">{usedTool ? "有" : "无"}</b>
           </div>
           <div>③ 计算：{calcNode}</div>
           <div>④ 阈值判定：{verdict}</div>
@@ -100,16 +100,16 @@ export function CredibilityDerivation({
             className="absolute top-[7px] left-0 right-0 h-2.5 rounded-sm"
             style={{
               background:
-                "linear-gradient(90deg, #fb7185 0 40%, #fbbf24 40% 60%, #34d399 60% 100%)",
+                "linear-gradient(90deg, #ef4444 0 40%, #f59e0b 40% 60%, #10b981 60% 100%)",
             }}
           />
-          <div className="absolute top-[3px] left-[60%] w-0.5 h-[18px] bg-[#e9edff] opacity-85" />
+          <div className="absolute top-[3px] left-[60%] w-0.5 h-[18px] bg-ink opacity-85" />
           <div
             className="absolute top-1"
             style={{ left: `${pct}%`, transform: "translateX(-50%)" }}
           >
             <div
-              className="w-3.5 h-3.5 rounded-full border-2 border-[#0a0e1a]"
+              className="w-3.5 h-3.5 rounded-full border-2 border-bg"
               style={{
                 backgroundColor: gaugeColor,
                 boxShadow: `0 0 8px ${gaugeColor}`,

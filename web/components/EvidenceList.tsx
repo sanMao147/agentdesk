@@ -20,10 +20,13 @@ export function EvidenceList({ evidence }: EvidenceListProps) {
           >
             <div className="flex items-center justify-between gap-2.5">
               <div className="flex items-center gap-2.5">
-                <span className="w-[22px] h-[22px] rounded-md grid place-items-center text-[0.72rem] font-bold text-[#0a0e1a] bg-grad flex-shrink-0">
+                <span
+                  className="w-[22px] h-[22px] rounded-md grid place-items-center text-[0.72rem] font-bold text-bg flex-shrink-0"
+                  style={{ backgroundColor: "var(--brand)" }}
+                >
                   {i + 1}
                 </span>
-                <span className="font-mono text-[0.8rem] font-semibold text-[#a9b6ff]">{e.chunk_id}</span>
+                <span className="font-mono text-[0.8rem] font-semibold text-ink">{e.chunk_id}</span>
               </div>
               <span className="font-mono text-[0.74rem] text-muted">
                 {e.doc_id} · {e.score.toFixed(4)}
@@ -31,11 +34,11 @@ export function EvidenceList({ evidence }: EvidenceListProps) {
             </div>
             <div className="h-1.5 rounded bg-[rgba(255,255,255,0.07)] overflow-hidden my-2.5">
               <div
-                className="h-full rounded bg-grad shadow-[0_0_14px_rgba(124,92,255,0.6)]"
-                style={{ width: `${width}%` }}
+                className="h-full rounded shadow-[0_0_14px_rgba(16,185,129,0.4)]"
+                style={{ width: `${width}%`, backgroundColor: "var(--brand)" }}
               />
             </div>
-            <div className="text-[#c3cbe6] text-[0.84rem] leading-relaxed">{text}…</div>
+            <div className="text-muted text-[0.84rem] leading-relaxed">{text}…</div>
           </div>
         );
       })}

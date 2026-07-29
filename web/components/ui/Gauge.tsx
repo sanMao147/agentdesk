@@ -18,7 +18,7 @@ export function Gauge({ pct, color, className = "", ...rest }: GaugeProps) {
     >
       <div
         className="absolute inset-[9px] rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-        style={{ background: "#0c1122" }}
+        style={{ background: "#0c0c0e" }}
       />
       <b className="relative text-[1.25rem] font-extrabold tabular-nums">
         {clamped}%

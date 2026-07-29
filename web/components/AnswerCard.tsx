@@ -33,7 +33,7 @@ export function AnswerCard({ answer, verify }: AnswerCardProps) {
             </div>
           </div>
         </div>
-        <div className="mt-3.5 text-[#e9edff] text-[0.95rem] leading-7 whitespace-pre-wrap">
+        <div className="mt-3.5 text-ink text-[0.95rem] leading-7 whitespace-pre-wrap">
           {answer || "（无答案）"}
         </div>
       </Card>

@@ -21,7 +21,7 @@ export function ChatHistory({ workingMemory, sessionId }: ChatHistoryProps) {
             <div className="text-faint text-[0.72rem] mb-1">
               🗜️ 滚动摘要（已压缩的旧轮次）
             </div>
-            <div className="text-[#c3cbe6] text-[0.84rem] leading-relaxed">
+            <div className="text-muted text-[0.84rem] leading-relaxed">
               {summary}
             </div>
           </div>
@@ -39,7 +39,7 @@ export function ChatHistory({ workingMemory, sessionId }: ChatHistoryProps) {
                 <div className="text-faint text-[0.68rem] mb-1">
                   {isUser ? "🧑 用户" : "🤖 助手"}
                 </div>
-                <div className="text-[#e9edff] text-[0.85rem] leading-relaxed whitespace-pre-wrap">
+                <div className="text-ink text-[0.85rem] leading-relaxed whitespace-pre-wrap">
                   {(m.content ?? "").slice(0, 500)}
                 </div>
               </div>

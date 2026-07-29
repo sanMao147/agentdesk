@@ -12,9 +12,9 @@ export const NODE_LABELS: Record<string, [string, string]> = {
 };
 
 export const MEM_KIND: Record<string, [string, string, string]> = {
-  preference: ["⭐", "偏好", "#7c5cff"],
-  fact: ["📌", "事实", "#22d3ee"],
-  event: ["🕒", "事件", "#f472b6"],
+  preference: ["⭐", "偏好", "#10b981"],
+  fact: ["📌", "事实", "#3aa6ff"],
+  event: ["🕒", "事件", "#f59e0b"],
 };
 
 export const SAMPLES: string[] = [

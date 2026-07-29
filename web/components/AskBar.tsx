@@ -109,7 +109,7 @@ export function AskBar({
             key={label}
             type="button"
             onClick={() => onRun(query)}
-            className="rounded-xl border border-stroke-2 bg-surface-2 text-[#dfe4ff] font-medium py-2 px-3 text-xs hover:border-brand hover:text-white hover:bg-brand/16 transition text-center"
+            className="rounded-xl border border-stroke-2 bg-surface-2 text-ink font-medium py-2 px-3 text-xs hover:border-brand hover:text-white hover:bg-brand/16 transition text-center"
           >
             {label}
           </button>
@@ -132,7 +132,8 @@ export function AskBar({
         <button
           type="button"
           onClick={() => onRun(initialQuery)}
-          className="rounded-xl border-0 text-white h-[50px] font-bold tracking-wide shadow-[0_14px_34px_-14px_rgba(124,92,255,0.85)] bg-grad hover:brightness-110 hover:-translate-y-0.5 transition"
+          className="rounded-xl border-0 text-white h-[50px] font-bold tracking-wide shadow-[0_14px_34px_-14px_rgba(16,185,129,0.7)] hover:brightness-110 hover:-translate-y-0.5 transition"
+          style={{ backgroundColor: "var(--brand)" }}
         >
           ⚡ 运行
         </button>
