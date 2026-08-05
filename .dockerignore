@@ -1,0 +1,11 @@
+web
+.git
+.gitignore
+__pycache__
+*.pyc
+.env*
+.venv
+venv
+node_modules
+agentdesk-docs
+docs

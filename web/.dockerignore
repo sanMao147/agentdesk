@@ -1,0 +1,8 @@
+node_modules
+.next
+.npm-cache
+.git
+.gitignore
+*.log
+.env*
+.DS_Store
